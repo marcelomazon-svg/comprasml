@@ -1,0 +1,19 @@
+{
+    "name": "PHP & MySQL",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/var/www/html",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "xdebug.php-debug",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+
+    "forwardPorts": [8080],
+    "postCreateCommand": "sudo chown -R vscode:vscode /workspace && sudo chmod -R 775 /workspace"
+}
