@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Doces ML - Paçoquinhas e Balas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Doces ML</h1>
+        <p>Paçoquinhas e balas deliciosas para adoçar sua semana!</p>
+    </header>
+
+    <main>
+       
+        <h2 class="titulo-produtos">Nossos Produtos</h2>
+
+        <section class="produtos">
+            <div class="produto">
+                <img src="img/pacoca.png" alt="Paçoca" />
+                <h3>Paçoquinha</h3>
+                <p>Deliciosa paçoquinha. Para adoçar seu dia.</p>
+                <p><strong>R$ 3,50 (1 unidade)</strong></p>
+            </div>
+            
+            <div class="produto">
+                <img src="img/7Belo.png" alt="Bala" />
+                <h3>Bala 7Belo</h3>
+                <p>A bala 7Belo é super macia, com um sabor irresistível de tutti-frutti que conquista qualquer um.</p>
+                <p><strong>R$ 0,50 (1 unidade)</strong></p>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <h2>Fazer Pedido</h2>
+            <form action="compra.php" method="POST">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="produto">Produto:</label>
+                <select id="produto" name="produto">
+                    <option value="paçoca">Paçoquinha</option>
+                    <option value="bala">Bala</option>
+                </select>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" required>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Doces ML - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
