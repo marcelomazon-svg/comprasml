@@ -1,1 +1,36 @@
+version: '3.8'
+
+services:
+  # O serviço principal com PHP e Apache
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/var/www/html:cached
+    ports:
+      - "8080:80"
+    networks:
+      - dev-network
+
+  # O serviço do banco de dados MySQL
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: meu_banco
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user_password
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - dev-network
+
+volumes:
+  db-data:
+
+networks:
+  dev-network:
 
