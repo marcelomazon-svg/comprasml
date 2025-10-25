@@ -70,8 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Preços simples
     $precos = [
-        "paçoca" => 3.50,
-        "bala" => 0.50
+        "paçoca" => 1.25,
+        "bala" => 0.25
     ];
 
     if (!isset($precos[$produto])) {
@@ -120,4 +120,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p>Requisição inválida.</p>";
 }
 ?>
+
 
